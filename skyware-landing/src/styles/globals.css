@@ -1,0 +1,105 @@
+@import "tailwindcss";
+
+:root {
+  --color-skyware-blue-dark: #0a1d3d;
+  --color-skyware-blue-medium: #0d47a1;
+  --color-skyware-blue-primary: #1976ff;
+  --color-skyware-sky-blue: #60b6ff;
+  --color-skyware-sky-blue-light: #d6e8ff;
+  --color-skyware-surface-light: #f5f9ff;
+  --color-skyware-text-dark: #0f172a;
+  --color-skyware-text-muted: #64748b;
+  --color-skyware-white: #ffffff;
+
+  color: var(--color-skyware-text-dark);
+  background: var(--color-skyware-white);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+::selection {
+  background: var(--color-skyware-sky-blue-light);
+  color: var(--color-skyware-blue-dark);
+}
+
+.spotlight-card {
+  --mouse-x: 50%;
+  --mouse-y: 50%;
+
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.86);
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.05);
+  transition:
+    border-color 180ms ease,
+    box-shadow 180ms ease,
+    transform 180ms ease;
+}
+
+.spotlight-card::before,
+.spotlight-card::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 220ms ease;
+}
+
+.spotlight-card::before {
+  inset: -1px;
+  z-index: 0;
+  background: radial-gradient(
+    260px circle at var(--mouse-x) var(--mouse-y),
+    rgba(25, 118, 255, 0.18),
+    transparent 58%
+  );
+}
+
+.spotlight-card::after {
+  inset: 0;
+  z-index: 1;
+  border-radius: inherit;
+  padding: 1px;
+  background: radial-gradient(
+    180px circle at var(--mouse-x) var(--mouse-y),
+    rgba(96, 182, 255, 0.75),
+    transparent 52%
+  );
+  mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  mask-composite: exclude;
+}
+
+.spotlight-card:hover {
+  border-color: rgba(96, 182, 255, 0.6);
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+  transform: translateY(-2px);
+}
+
+.spotlight-card:hover::before {
+  opacity: 1;
+}
+
+.spotlight-card:hover::after {
+  opacity: 0.9;
+}

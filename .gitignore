@@ -1,0 +1,13 @@
+.agents/
+.codex/
+
+node_modules/
+dist/
+dist-ssr/
+*.local
+*.log
+
+.DS_Store
+.idea/
+.vscode/*
+!.vscode/extensions.json
