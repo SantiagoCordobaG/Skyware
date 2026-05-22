@@ -1,26 +1,86 @@
+import { ExternalLink, MapPin, Sparkles } from "lucide-react";
 import { socialProofContent } from "../../data/landingContent";
+import Button from "../ui/Button";
 import SectionHeader from "../ui/SectionHeader";
+import { Spotlight, SpotlightCard } from "../ui/Spotlight";
 
 export default function SocialProofSection() {
   return (
-    <section className="bg-[var(--color-skyware-surface-light)] py-20">
-      <div className="mx-auto max-w-7xl px-5 text-center lg:px-8">
+    <section id="proyectos" className="bg-[var(--color-skyware-surface-light)] py-20">
+      <div className="mx-auto max-w-7xl px-5 lg:px-8">
         <SectionHeader
           badge={socialProofContent.badge}
           title={socialProofContent.title}
           description={socialProofContent.description}
         />
 
-        <div className="mx-auto mt-10 grid max-w-4xl gap-5 md:grid-cols-3">
-          {socialProofContent.placeholders.map((item) => (
-            <div
-              key={item}
-              className="rounded-[2rem] border border-dashed border-blue-200 bg-white p-8 text-sm font-bold text-slate-600"
-            >
-              {item}
-            </div>
+        <Spotlight className="mx-auto mt-12 grid max-w-5xl gap-6">
+          {socialProofContent.projects.map((project) => (
+            <SpotlightCard key={project.name} className="p-0">
+              <article className="grid overflow-hidden lg:grid-cols-[1.05fr_0.95fr]">
+                <a
+                  href={project.url}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label={`Ver página de ${project.name}`}
+                  className="group relative block min-h-72 overflow-hidden bg-slate-950 focus:outline-none focus:ring-4 focus:ring-blue-100"
+                >
+                  <img
+                    src={project.image}
+                    alt={project.imageAlt}
+                    className="h-full min-h-72 w-full object-cover transition duration-500 group-hover:scale-105"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/72 via-slate-950/10 to-transparent" />
+                  <div className="absolute bottom-5 left-5 right-5 flex items-center justify-between gap-4 rounded-2xl border border-white/15 bg-white/12 px-4 py-3 text-white backdrop-blur-md">
+                    <span className="text-sm font-bold">{project.name}</span>
+                    <span className="inline-flex items-center gap-2 text-xs font-semibold">
+                      Ver sitio
+                      <ExternalLink className="h-4 w-4" aria-hidden="true" />
+                    </span>
+                  </div>
+                </a>
+
+                <div className="flex flex-col p-7 text-left md:p-9">
+                  <div className="flex flex-wrap gap-3 text-xs font-bold uppercase tracking-[0.18em] text-blue-700">
+                    <span className="inline-flex items-center gap-2 rounded-full bg-blue-50 px-3 py-2">
+                      <Sparkles className="h-4 w-4" aria-hidden="true" />
+                      {project.type}
+                    </span>
+                    <span className="inline-flex items-center gap-2 rounded-full bg-slate-50 px-3 py-2 text-slate-600">
+                      <MapPin className="h-4 w-4" aria-hidden="true" />
+                      {project.location}
+                    </span>
+                  </div>
+
+                  <h3 className="mt-7 text-3xl font-black tracking-tight text-slate-950 sm:text-4xl">
+                    {project.title}
+                  </h3>
+                  <p className="mt-4 leading-8 text-slate-600">
+                    {project.description}
+                  </p>
+
+                  <div className="mt-6 flex flex-wrap gap-2">
+                    {project.highlights.map((highlight) => (
+                      <span
+                        key={highlight}
+                        className="rounded-full border border-blue-100 bg-white px-4 py-2 text-sm font-bold text-slate-700"
+                      >
+                        {highlight}
+                      </span>
+                    ))}
+                  </div>
+
+                  <div className="mt-8">
+                    <Button href={project.url} target="_blank" rel="noreferrer">
+                      Ver página publicada
+                    </Button>
+                  </div>
+                </div>
+              </article>
+            </SpotlightCard>
           ))}
-        </div>
+        </Spotlight>
       </div>
     </section>
   );

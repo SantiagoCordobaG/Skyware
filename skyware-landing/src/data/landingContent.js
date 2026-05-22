@@ -1,3 +1,5 @@
+import brasaVivaPreview from "../assets/images/brasa-viva-preview.png";
+
 export const heroContent = {
   badge: "Diseño web para negocios que quieren crecer",
   title: "Creamos páginas web profesionales para que tu negocio venda más",
@@ -46,15 +48,24 @@ export const problemSolutionContent = {
 };
 
 export const socialProofContent = {
-  badge: "Primeros proyectos Skyware",
-  title:
-    "Estamos construyendo proyectos con negocios que quieren crecer digitalmente",
+  badge: "Proyectos reales",
+  title: "Páginas de negocio listas para generar confianza desde el primer clic",
   description:
-    "Este espacio estará preparado para mostrar testimonios reales, casos de estudio y resultados cuando los primeros proyectos estén publicados.",
-  placeholders: [
-    "Proyecto en desarrollo",
-    "Caso de estudio futuro",
-    "Testimonio real próximamente",
+    "Ya estamos publicando experiencias digitales para negocios locales con diseño moderno, enfoque comercial y navegación clara.",
+  projects: [
+    {
+      name: "Brasa Viva",
+      type: "Restaurante premium",
+      location: "Cali, Colombia",
+      title: "Cocina de autor al fuego en Cali",
+      description:
+        "Landing page para presentar el concepto gastronómico, menú destacado, experiencias, eventos privados y reservas por WhatsApp.",
+      url: "https://brasa-viva-brown.vercel.app/",
+      image: brasaVivaPreview,
+      imageAlt:
+        "Vista principal de la página web de Brasa Viva con platos de autor y ambiente cálido.",
+      highlights: ["Diseño responsive", "Menú visual", "Reservas por WhatsApp"],
+    },
   ],
 };
 
