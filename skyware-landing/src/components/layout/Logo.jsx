@@ -1,12 +1,12 @@
 import { useId } from "react";
 import { siteConfig } from "../../config/site";
 
-function LogoMark() {
+export function LogoMark({ className = "h-12 w-14 shrink-0" }) {
   const gradientId = useId();
 
   return (
     <svg
-      className="h-12 w-14 shrink-0"
+      className={className}
       viewBox="0 0 112 90"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

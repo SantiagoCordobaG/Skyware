@@ -1,4 +1,5 @@
 import brasaVivaPreview from "../assets/images/brasa-viva-preview.png";
+import altoCaliHotelPreview from "../assets/images/Alto-Cali-BG.png";
 
 export const heroContent = {
   badge: "Diseño web para negocios que quieren crecer",
@@ -53,6 +54,19 @@ export const socialProofContent = {
   description:
     "Ya estamos publicando experiencias digitales para negocios locales con diseño moderno, enfoque comercial y navegación clara.",
   projects: [
+    {
+      name: "Alto Cali Hotel Boutique",
+      type: "Hotel boutique premium",
+      location: "Cali, Colombia",
+      title: "Experiencia boutique con reservas y presencia premium",
+      description:
+        "Sitio web para presentar habitaciones, servicios, experiencias, galería y ubicación con una estética elegante enfocada en generar confianza y reservas directas.",
+      url: "https://alto-cali-hotel.vercel.app/",
+      image: altoCaliHotelPreview,
+      imageAlt:
+        "Vista previa del sitio web de Alto Cali Hotel Boutique con estilo oscuro, detalles dorados y enfoque en reservas.",
+      highlights: ["Diseño premium", "Habitaciones", "Reserva directa"],
+    },
     {
       name: "Brasa Viva",
       type: "Restaurante premium",
