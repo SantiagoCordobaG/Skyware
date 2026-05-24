@@ -1,7 +1,6 @@
 import FloatingWhatsAppButton from "./components/layout/FloatingWhatsAppButton";
 import Footer from "./components/layout/Footer";
 import Header from "./components/layout/Header";
-import BenefitsSection from "./components/sections/BenefitsSection";
 import FAQSection from "./components/sections/FAQSection";
 import FinalCTA from "./components/sections/FinalCTA";
 import Hero from "./components/sections/Hero";
@@ -20,11 +19,10 @@ export default function SkywareLandingPage() {
         <Hero />
         <ProblemSolution />
         <ServicesSection />
-        <BenefitsSection />
         <ProcessSection />
+        <SocialProofSection />
         <PlansSection />
         <TrustAndAISection />
-        <SocialProofSection />
         <FAQSection />
         <FinalCTA />
       </main>

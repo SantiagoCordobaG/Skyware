@@ -1,6 +1,5 @@
-import { CheckCircle2 } from "lucide-react";
 import { siteConfig } from "../../config/site";
-import { benefits, benefitsIntro } from "../../data/benefits";
+import { benefitsIntro } from "../../data/benefits";
 import Button from "../ui/Button";
 import SectionBadge from "../ui/SectionBadge";
 
@@ -25,7 +24,7 @@ export default function BenefitsSection() {
           </Button>
         </div>
 
-        <div className="grid gap-4 sm:grid-cols-2">
+        {/* <div className="grid gap-4 sm:grid-cols-2">
           {benefits.map((benefit) => (
             <div
               key={benefit}
@@ -35,7 +34,7 @@ export default function BenefitsSection() {
               {benefit}
             </div>
           ))}
-        </div>
+        </div> */}
       </div>
     </section>
   );
