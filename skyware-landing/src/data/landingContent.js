@@ -1,5 +1,8 @@
 import brasaVivaPreview from "../assets/images/brasa-viva-preview.png";
 import altoCaliHotelPreview from "../assets/images/Alto-Cali-BG.png";
+import skywareFoodPreview from "../assets/images/SkywareFood.png";
+import fortCodePreview from "../assets/images/FortCode.png";
+import manjaresInventarioPreview from "../assets/images/ManjaresInventario.png";
 
 export const heroContent = {
   badge: "Diseño web para negocios que quieren crecer",
@@ -79,6 +82,42 @@ export const socialProofContent = {
       imageAlt:
         "Vista principal de la página web de Brasa Viva con platos de autor y ambiente cálido.",
       highlights: ["Diseño responsive", "Menú visual", "Reservas por WhatsApp"],
+    },
+    {
+      name: "Skyware Food",
+      type: "Plataforma de pedidos",
+      location: "Colombia",
+      title: "Pedidos online para restaurantes",
+      description:
+        "Plataforma web para que restaurantes reciban pedidos en línea con menú digital, carrito de compras y notificaciones al establecimiento.",
+      url: "https://skyware-food.vercel.app/",
+      image: skywareFoodPreview,
+      imageAlt: "Vista previa del proyecto Skyware Food.",
+      highlights: ["Menú digital", "Carrito de compras", "Pedidos online"],
+    },
+    {
+      name: "Fort Code",
+      type: "SaaS para discotecas",
+      location: "Colombia",
+      title: "Gestión inteligente para discotecas y bares",
+      description:
+        "SaaS todo-en-uno para administrar discotecas: control de ingresos, gestión de mesas, ventas, reservas de zonas VIP y estadísticas en tiempo real.",
+      url: "https://fort-code.vercel.app/",
+      image: fortCodePreview,
+      imageAlt: "Vista previa del proyecto Fort Code.",
+      highlights: ["Control de ingresos", "Gestión de mesas", "Reservas VIP"],
+    },
+    {
+      name: "Manjares Inventario",
+      type: "Sistema de inventario",
+      location: "Colombia",
+      title: "Gestión de inventario para restaurantes",
+      description:
+        "Sistema web para administrar inventarios, control de stock, registro de productos y reportes para restaurantes y negocios de alimentos.",
+      url: "https://manjares-inventario.vercel.app/login",
+      image: manjaresInventarioPreview,
+      imageAlt: "Vista previa del proyecto Manjares Inventario.",
+      highlights: ["Control de stock", "Registro de productos", "Reportes"],
     },
   ],
 };
